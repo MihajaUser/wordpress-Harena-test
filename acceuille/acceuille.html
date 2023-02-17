@@ -1,175 +1,175 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<h2 style="text-align: center">Responsive Pricing Tables</h2>
-<p style="text-align: center">Resize the browser window to see the effect.</p>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <h2 style="text-align: center">Responsive Pricing Tables</h2>
+  <p style="text-align: center">Resize the browser window to see the effect.</p>
 
-<div id="myColumn1" class="columns">
-  <ul class="price">
-    <li id="myheader1" class="header">Basic</li>
-    <li class="grey">$ 9.99 / year</li>
-    <li>10 Lecons</li>
-    <li>10 Exercices</li>
-    <li>0 Assistance</li>
-    <li>0 Montor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-    <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
-</div>
+  <div id="myColumn1" class="columns">
+    <ul class="price">
+      <li id="myheader1" class="header">Basic</li>
+      <li class="grey">$ 9.99 / year</li>
+      <li>10 leçons</li>
+      <li>10 Exercices</li>
+      <li>0 Assistance</li>
+      <li>0 Montor</li>
+      <li
+        class="grey"
+        style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
+      >
+      <input id="PriceButton" type="submit" value="SignUp">
+      </li>
+    </ul>
+  </div>
 
-<div id="myColumn2" class="columns">
-  <ul class="price">
-    <li id="myheader2" class="header">Pro</li>
-    <li class="grey">$ 24.99 / year</li>
-    <li>15 Lecons</li>
-    <li>15 Exercices</li>
-    <li>1 Assistance</li>
-    <li>0 Montor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-    <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
-</div>
+  <div id="myColumn2" class="columns">
+    <ul class="price">
+      <li id="myheader2" class="header">Pro</li>
+      <li class="grey">$ 24.99 / year</li>
+      <li>15 leçons</li>
+      <li>15 Exercices</li>
+      <li>1 Assistance</li>
+      <li>0 Montor</li>
+      <li
+        class="grey"
+        style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
+      >
+      <input id="PriceButton" type="submit" value="SignUp">
+      </li>
+    </ul>
+  </div>
 
-<div id="myColumn3" class="columns">
-  <ul class="price">
-    <li id="myheader3" class="header">Premium</li>
-    <li class="grey">$ 49.99 / year</li>
-    <li>20 Lecons</li>
-    <li>20 Exercices</li>
-    <li>1 Assistance</li>
-    <li>1 Montor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-     <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
-</div>
+  <div id="myColumn3" class="columns">
+    <ul class="price">
+      <li id="myheader3" class="header">Premium</li>
+      <li class="grey">$ 49.99 / year</li>
+      <li>20 leçons</li>
+      <li>20 Exercices</li>
+      <li>1 Assistance</li>
+      <li>1 Montor</li>
+      <li
+        class="grey"
+        style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
+      >
+      <input id="PriceButton" type="submit" value="SignUp">
+      </li>
+    </ul>
+  </div>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  .columns {
-    float: left;
-    width: 33.3%;
-    padding: 15px;
-  }
-
-  .columns:hover {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-  }
-
-  .price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    border-radius: 36px;
-  }
-
-  .price .header {
-    background-color: #7a7a74;
-    color: white;
-    font-size: 25px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-  }
-
-  .price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-    background-color: white;
-  }
-
-  .price .grey {
-    background-color: #eee;
-    font-size: 20px;
-  }
-
-  .button {
-    background-color: #04aa6d;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .test{
-    background-color: #e9c61a;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .columns {
-      width: 100%;
+  <style>
+    * {
+      box-sizing: border-box;
     }
-  }
-</style>
-<script>
-  function myanimate1() {
-    gsap.to("#myheader1", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse1() {
-    gsap.to("#myheader1", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
 
-  function myanimate2() {
-    gsap.to("#myheader2", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse2() {
-    gsap.to("#myheader2", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
-  function myanimate3() {
-    gsap.to("#myheader3", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse3() {
-    gsap.to("#myheader3", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
-  document
-    .getElementById("myColumn1")
-    .addEventListener("mouseover", myanimate1);
-  document.getElementById("myColumn1").addEventListener("mouseout", reverse1);
-  document
-    .getElementById("myColumn2")
-    .addEventListener("mouseover", myanimate2);
-  document.getElementById("myColumn2").addEventListener("mouseout", reverse2);
-  document
-    .getElementById("myColumn3")
-    .addEventListener("mouseover", myanimate3);
-  document.getElementById("myColumn3").addEventListener("mouseout", reverse3);
-</script>
-  
+    .columns {
+      float: left;
+      width: 33.3%;
+      padding: 15px;
+    }
+
+    .columns:hover {
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 25px;
+      transition: all 0.2s ease-in-out;
+      transform: scale(1.1);
+    }
+
+    .price {
+      list-style-type: none;
+      border: 1px solid #eee;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      border-radius: 36px;
+    }
+
+    .price .header {
+      background-color: #7a7a74;
+      color: white;
+      font-size: 25px;
+      border-top-right-radius: 25px;
+      border-top-left-radius: 25px;
+      border: 2px solid #D4B209;
+    }
+
+    .price li {
+      border-bottom: 1px solid #eee;
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .price .grey {
+      background-color: #eee;
+      font-size: 20px;
+    }
+
+    .button {
+      background-color: #04aa6d;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .test{
+      background-color: #e9c61a;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .columns {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    function myanimate1() {
+      gsap.to("#myheader1", {
+        duration: 1,
+        backgroundColor: "#e9c61a",
+      });
+    }
+    function reverse1() {
+      gsap.to("#myheader1", {
+        duration: 1,
+        backgroundColor: "#7a7a74",
+      });
+    }
+
+    function myanimate2() {
+      gsap.to("#myheader2", {
+        duration: 1,
+        backgroundColor: "#e9c61a",
+      });
+    }
+    function reverse2() {
+      gsap.to("#myheader2", {
+        duration: 1,
+        backgroundColor: "#7a7a74",
+      });
+    }
+    function myanimate3() {
+      gsap.to("#myheader3", {
+        duration: 1,
+        backgroundColor: "#e9c61a",
+      });
+    }
+    function reverse3() {
+      gsap.to("#myheader3", {
+        duration: 1,
+        backgroundColor: "#7a7a74",
+      });
+    }
+    document
+      .getElementById("myColumn1")
+      .addEventListener("mouseover", myanimate1);
+    document.getElementById("myColumn1").addEventListener("mouseout", reverse1);
+    document
+      .getElementById("myColumn2")
+      .addEventListener("mouseover", myanimate2);
+    document.getElementById("myColumn2").addEventListener("mouseout", reverse2);
+    document
+      .getElementById("myColumn3")
+      .addEventListener("mouseover", myanimate3);
+    document.getElementById("myColumn3").addEventListener("mouseout", reverse3);
+  </script>
