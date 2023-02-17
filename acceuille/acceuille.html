@@ -14,7 +14,7 @@
       class="grey"
       style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
     >
-      <a href="#" class="button">Sign Up</a>
+    <input id="PriceButton" type="submit" value="SignUp">
     </li>
   </ul>
 </div>
@@ -31,7 +31,7 @@
       class="grey"
       style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
     >
-      <a href="#" class="button">Sign Up</a>
+    <input id="PriceButton" type="submit" value="SignUp">
     </li>
   </ul>
 </div>
@@ -48,7 +48,7 @@
       class="grey"
       style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
     >
-      <a href="#" class="button">Sign Up</a>
+     <input id="PriceButton" type="submit" value="SignUp">
     </li>
   </ul>
 </div>
@@ -61,7 +61,7 @@
   .columns {
     float: left;
     width: 33.3%;
-    padding: 8px;
+    padding: 15px;
   }
 
   .columns:hover {
@@ -111,6 +111,9 @@
     text-decoration: none;
     font-size: 18px;
   }
+  .test{
+    background-color: #e9c61a;
+  }
 
   @media only screen and (max-width: 600px) {
     .columns {
@@ -122,7 +125,7 @@
   function myanimate1() {
     gsap.to("#myheader1", {
       duration: 1,
-      backgroundColor: "#EBDB3D",
+      backgroundColor: "#e9c61a",
     });
   }
   function reverse1() {
@@ -135,7 +138,7 @@
   function myanimate2() {
     gsap.to("#myheader2", {
       duration: 1,
-      backgroundColor: "#EBDB3D",
+      backgroundColor: "#e9c61a",
     });
   }
   function reverse2() {
@@ -147,7 +150,7 @@
   function myanimate3() {
     gsap.to("#myheader3", {
       duration: 1,
-      backgroundColor: "#EBDB3D",
+      backgroundColor: "#e9c61a",
     });
   }
   function reverse3() {
@@ -169,3 +172,4 @@
     .addEventListener("mouseover", myanimate3);
   document.getElementById("myColumn3").addEventListener("mouseout", reverse3);
 </script>
+  
