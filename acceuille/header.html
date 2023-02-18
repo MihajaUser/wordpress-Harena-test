@@ -1,5 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<div>
+<div style="background-color: green; margin-bottom: 200px">
   <div style="float: left">
     <img
       class="logo"
@@ -7,24 +7,28 @@
     />
   </div>
   <div style="float: center; text-align: center">
-    <div class="zoom">BIENVENUE</div>
+    <div class="zoom" style="margin-left: 100px">BIENVENUE</div>
     <div class="zoom">SUR</div>
     <div class="zoom">MAF</div>
   </div>
 </div>
+<div class="texte4">
+  <h1>La formation des dirigeants</h1>
+</div>
 <style>
-.logo{
+  .logo {
     width: 500px;
-}
-.logo:hover{
+  }
+  .logo:hover {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5);
-}
+  }
   .zoom {
     height: 120px;
     width: 120px;
     margin-right: 100px;
+    border: 2px solid #d4b209;
     color: white;
     padding-top: 45px;
     background-color: #bbb;
@@ -32,10 +36,35 @@
     display: inline-block;
     transition: transform 0.2s;
   }
-  
+  .texte4 {
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+
+  .texte4:hover {
+  }
 </style>
 <script>
-
- gsap.from(".zoom",{duration:1.5, repeat:-1,opacity :0,y:350 });
- gsap.from(".logo",{duration:1, repeat:-1,opacity :0,y:150 ,stagger:0.25})
+  gsap.from(".zoom", {
+    duration: 1.5,
+    repeat: -1,
+    opacity: 0,
+    y: 350,
+    ease: "bounce",
+  });
+  gsap.from(".texte4", {
+    duration: 1.5,
+    repeat: -1,
+    opacity: 0,
+    y: 350,
+    ease: "back",
+  });
+  gsap.from(".logo", {
+    duration: 1,
+    repeat: -1,
+    opacity: 0,
+    y: 150,
+    stagger: 0.25,
+  });
 </script>
