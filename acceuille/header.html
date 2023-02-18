@@ -1,5 +1,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<div style="background-color: green; margin-bottom: 200px">
+<div style=" margin-bottom: 200px; padding-top:100px">
   <div style="float: left">
     <img
       class="logo"
@@ -11,11 +11,21 @@
     <div class="zoom">SUR</div>
     <div class="zoom">MAF</div>
   </div>
+
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h2>La formation des dirigeants</h2>
+      </div>
+      <div class="flip-box-back">
+        <h2>La meilleure de tous</h2>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="texte4">
-  <h1>La formation des dirigeants</h1>
-</div>
+
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One");
   .logo {
     width: 500px;
   }
@@ -27,6 +37,8 @@
   .zoom {
     height: 120px;
     width: 120px;
+    font-family: Aldrich, sans-serif;
+    font-weight: bold;
     margin-right: 100px;
     border: 2px solid #d4b209;
     color: white;
@@ -34,36 +46,83 @@
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: transform 0.2s;
+    transition: transform 3-8s;
   }
-  .texte4 {
-    background-color: red;
-    color: white;
-    text-align: center;
+  .zoom:hover {
+       transition: transform 3-8s;
+    background-color: #d4b209
   }
 
-  .texte4:hover {
+  .flip-box {
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    margin-left: 630px;
+    margin-top: 70px;
+
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-size: 35px;
+padding-top: 50px;
+    color: white;
+  }
+
+  .flip-box-back {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-weight: bold;
+    padding-top: 50px;
+    color: white;
+    transform: rotateY(180deg);
   }
 </style>
 <script>
   gsap.from(".zoom", {
-    duration: 1.5,
-    repeat: -1,
+    duration: 2,
+    // repeat: -1,
     opacity: 0,
     y: 350,
     ease: "bounce",
   });
-  gsap.from(".texte4", {
+  gsap.from(".flip-box", {
     duration: 1.5,
-    repeat: -1,
+    //  repeat: -1,
     opacity: 0,
     y: 350,
     ease: "back",
   });
   gsap.from(".logo", {
-    duration: 1,
-    repeat: -1,
+    duration: 2,
+    // repeat: -1,
     opacity: 0,
+    ease: "back",
     y: 150,
     stagger: 0.25,
   });
