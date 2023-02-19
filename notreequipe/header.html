@@ -1,0 +1,151 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<div
+  id="myCard"
+  style="
+    float: center;
+    text-align: center;
+    background-color: #ffffff45;
+    height: 650px;
+    margin-top: -200px;
+    padding-top: 10%;
+    border-radius: 80px;
+  "
+>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h1>NOS FORCES</h1>
+      </div>
+      <div class="flip-box-back">
+        <h1>VOS ATOUTS</h1>
+      </div>
+    </div>
+  </div>
+  <!--Icon image -->
+
+  <div id="myIcon" class="myIcon">
+    <img
+      src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/—Pngtree—cartoon-man-character-speaking_4637869.png"
+      width="70%"
+    />
+  </div>
+
+  <!--text BIENVENUE -->
+  <div class="myRound" style="margin-left: -0px; margin-top: 10px">
+    PRECISION
+  </div>
+  <br />
+  <div class="myRound">PONCTUALITE</div>
+  <br />
+  <div class="myRound">INNOVATION</div>
+  <br />
+</div>
+
+<style>
+  .test {
+    color: #d4d0d0;
+  }
+
+  .myRound {
+    font-size: 2.5em;
+    height: 80px;
+    width: 400px;
+    text-shadow: 0 0 3px #d4b209, 0 0 5px #d4b209;
+    font-family: Rockwell, console;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    border: 2px solid #d4b209;
+    color: white;
+    /*background-color: #d4d0d0;*/
+    border-radius: 50px;
+    display: inline-block;
+    transition: transform 3-8s;
+  }
+  .myIcon {
+    width: 40%;
+    float: left;
+    margin-left: 80px;
+    padding-top: 0px;
+  }
+  .flip-box {
+    margin-top: -100px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    width: 500px;
+    height: 150px;
+    margin-left: 30%;
+    border-radius: 15px;
+    /* border: 1px solid #fff;*/
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    font-size: 1.5em;
+    font-family: Rockwell, console;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 30px;
+    color: white;
+  }
+
+  .flip-box-back {
+    font-family: Rockwell, console;
+    font-weight: bold;
+    font-weight: bold;
+    padding-top: 30px;
+    color: white;
+    transform: rotateY(180deg);
+  }
+</style>
+<script>
+  // animation iconImage
+  const myIconImage = document.getElementById("myIcon");
+  const hoverIcon = gsap.from(".myIcon", {
+    duration: 2,
+    opacity: 0,
+    ease: "bounce",
+    y: -150,
+  });
+  //animation text
+  const myRoundText = document.getElementById("myCard");
+  const hover = gsap.from(".myRound", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    x: 150,
+    stagger: 0.25,
+  });
+
+  // assignement of animation
+  myRoundText.addEventListener("mouseenter", () => {
+    hover.play();
+    hoverIcon.play();
+  });
+  myRoundText.addEventListener("mouseleave", () => {
+    hover.reverse();
+    hoverIcon.reverse();
+  });
+</script>
