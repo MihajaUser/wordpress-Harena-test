@@ -1,0 +1,68 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<div
+  id="myCard"
+  style="
+    float: center;
+    text-align: center;
+    background-color: #ffffff45;
+    height: 650px;
+    margin-top: -200px;
+    padding-top: 45px;
+    border-radius: 80px;
+  "
+>
+  <div id="myIcon" class="myIcon" style="margin-left: 20px; padding-top: 0px">
+    <img
+      src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/70-703507_cartoon-business-people-having-meeting-business-meeting-clipart-removebg-preview.png"
+      width="30%"
+    />
+  </div>
+  <div class="myRound" style="margin-left: 100px">APPRENDRE</div>
+  <div class="myRound">ASSIMILER</div>
+  <div class="myRound">PRATIQUER</div>
+  <div class="myRound">PARTAGER</div>
+</div>
+
+<style>
+  .myRound {
+    height: 120px;
+    width: 120px;
+    font-family: Aldrich, sans-serif;
+    font-weight: bold;
+    margin-right: 100px;
+    border: 2px solid #d4b209;
+    color: white;
+    padding-top: 45px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 3-8s;
+  }
+</style>
+<script>
+  // animation iconImage
+  const myIconImage = document.getElementById("myIcon");
+  const hoverIcon = gsap.from(".myIcon", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    y: -150,
+  });
+
+  const myText = document.getElementById("myCard");
+  const hover = gsap.from(".myRound", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    y: 150,
+    stagger: 0.25,
+  });
+  myText.addEventListener("mouseenter", () => {
+    hover.play();
+    hoverIcon.play();
+  });
+  myText.addEventListener("mouseleave", () => {
+    hover.reverse();
+    hoverIcon.reverse();
+  });
+</script>
