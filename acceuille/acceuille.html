@@ -1,173 +1,145 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<h2 style="text-align: center">Prix des formations</h2>
-<div id="myColumn1" class="columns">
-  <ul class="price">
-    <li id="myheader1" class="header">Basic</li>
-    <li class="grey">$ 9.99 / year</li>
-    <li>10 leçons</li>
-    <li>10 Exercices</li>
-    <li>0 Assistance</li>
-    <li>0 mentor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-    <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
-</div>
+<div
+  id="myCard"
+  style="
+    float: center;
+    text-align: center;
+    background-color: #ffffff45;
+    height: 650px;
+    margin-top: -200px;
+    padding-top: 10%;
+    border-radius: 80px;
+  "
+>
+  <!--Icon image -->
+  <div id="myIcon" class="myIcon">
+    <img
+      src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/—Pngtree—cartoon-man-character-speaking_4637869.png"
+      width="70%"
+    />
+  </div>
 
-<div id="myColumn2" class="columns">
-  <ul class="price">
-    <li id="myheader2" class="header">Pro</li>
-    <li class="grey">$ 24.99 / year</li>
-    <li>15 leçons</li>
-    <li>15 Exercices</li>
-    <li>1 Assistance</li>
-    <li>0 mentor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-    <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
-</div>
+  <!--text BIENVENUE -->
+  <div class="myRound"  style="margin-left:-50px">BIENVENUE</div>
+  <div style="padding-left:85px" class="myRound">SUR</div>
+  <div class="myRound">MAF</div>
 
-<div id="myColumn3" class="columns">
-  <ul class="price">
-    <li id="myheader3" class="header">Premium</li>
-    <li class="grey">$ 49.99 / year</li>
-    <li>20 leçons</li>
-    <li>20 Exercices</li>
-    <li>1 Assistance</li>
-    <li>1 mentor</li>
-    <li
-      class="grey"
-      style="border-bottom-left-radius: 25px; border-bottom-right-radius: 25px"
-    >
-    <input id="PriceButton" type="submit" value="SignUp">
-    </li>
-  </ul>
+  <!--text La formation des dirigeants-->
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <h2>La formation des dirigeants</h2>
+      </div>
+      <div class="flip-box-back">
+        <h2>La meilleure de tous</h2>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
-
-  .columns {
-    float: left;
-    width: 33.3%;
-    padding: 15px;
-  }
-
-  .columns:hover {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-  }
-
-  .price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    border-radius: 36px;
-  }
-
-  .price .header {
-    background-color: #7a7a74;
-    color: white;
-    font-size: 25px;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border: 2px solid #D4B209;
-  }
-
-  .price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-    background-color: white;
-  }
-
-  .price .grey {
-    background-color: #eee;
-    font-size: 20px;
-  }
-
-  .button {
-    background-color: #04aa6d;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-  }
   .test{
-    background-color: #e9c61a;
+    color:#d4d0d0
   }
 
-  @media only screen and (max-width: 600px) {
-    .columns {
-      width: 100%;
-    }
+  .myRound {
+    font-size:2.5em;
+    height: 120px;
+    text-shadow: 0 0 3px #d4b209, 0 0 5px #d4b209;
+    width: 120px;
+    font-family: Rockwell, console;
+    font-weight: bold;
+    margin-right: 50px;
+    /*border: 2px solid #d4b209;*/
+    color: white;
+    padding-top: 45px;
+    /*background-color: #d4d0d0;*/
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 3-8s;
+  }
+  .myIcon {
+    width: 40%;
+    float: left;
+    margin-left: 80px;
+    padding-top: 0px;
+  }
+  .flip-box {
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    margin-left: 50.5%;
+    margin-top: 20px;
+border-radius: 80px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-box-front {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 70px;
+    color: white;
+  }
+
+  .flip-box-back {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-weight: bold;
+    padding-top: 80px;
+    color: white;
+    transform: rotateY(180deg);
   }
 </style>
 <script>
-  function myanimate1() {
-    gsap.to("#myheader1", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse1() {
-    gsap.to("#myheader1", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
+  // animation iconImage
+  const myIconImage = document.getElementById("myIcon");
+  const hoverIcon = gsap.from(".myIcon", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    y: -150,
+  });
+  //animation text
+  const myRoundText = document.getElementById("myCard");
+  const hover = gsap.from(".myRound", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    y: 150,
+    stagger: 0.25,
+  });
 
-  function myanimate2() {
-    gsap.to("#myheader2", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse2() {
-    gsap.to("#myheader2", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
-  function myanimate3() {
-    gsap.to("#myheader3", {
-      duration: 1,
-      backgroundColor: "#e9c61a",
-    });
-  }
-  function reverse3() {
-    gsap.to("#myheader3", {
-      duration: 1,
-      backgroundColor: "#7a7a74",
-    });
-  }
-  document
-    .getElementById("myColumn1")
-    .addEventListener("mouseover", myanimate1);
-  document.getElementById("myColumn1").addEventListener("mouseout", reverse1);
-  document
-    .getElementById("myColumn2")
-    .addEventListener("mouseover", myanimate2);
-  document.getElementById("myColumn2").addEventListener("mouseout", reverse2);
-  document
-    .getElementById("myColumn3")
-    .addEventListener("mouseover", myanimate3);
-  document.getElementById("myColumn3").addEventListener("mouseout", reverse3);
+  // assignement of animation
+  myRoundText.addEventListener("mouseenter", () => {
+    hover.play();
+    hoverIcon.play();
+  });
+  myRoundText.addEventListener("mouseleave", () => {
+    hover.reverse();
+    hoverIcon.reverse();
+  });
 </script>
