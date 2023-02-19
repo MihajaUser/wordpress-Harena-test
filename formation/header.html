@@ -1,12 +1,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<div id="myCard" style="float: center; text-align: center ;background-color:#FFFFFF45 ; height:650px ;margin-top:-200px;padding-top:45px ;border-radius:80px">
-    <div class="myIcon" style="margin-left:20px ;padding-top:0px">
-    <img src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/dessin-haut-de-page-formation.png" width="30%">
-    </div>
-  <div class="myRound" style="margin-left: 100px">SUR</div>
-  <div class="myRound">LA</div>
-  <div class="myRound">MAF</div>
-  <div class="myRound">FORMATION</div>
+<div
+  id="myCard"
+  style="
+    float: center;
+    text-align: center;
+    background-color: #ffffff45;
+    height: 650px;
+    margin-top: -200px;
+    padding-top: 45px;
+    border-radius: 80px;
+  "
+>
+  <div id="myIcon" class="myIcon" style="margin-left: 20px; padding-top: 0px">
+    <img
+      src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/dessin-haut-de-page-formation.png"
+      width="30%"
+    />
+  </div>
+  <div class="myRound" style="margin-left: 100px">APPRENDRE</div>
+  <div class="myRound">ASSIMILER</div>
+  <div class="myRound">PRATIQUER</div>
+  <div class="myRound">PARTAGER</div>
 </div>
 
 <style>
@@ -26,7 +40,14 @@
   }
 </style>
 <script>
-gsap.from(".myIcon",{duration:2,opacity:0,ease:"back",y:0})
+  // animation iconImage
+  const myIconImage = document.getElementById("myIcon");
+  const hoverIcon = gsap.from(".myIcon", {
+    duration: 2,
+    opacity: 0,
+    ease: "back",
+    y: -150,
+  });
 
   const myText = document.getElementById("myCard");
   const hover = gsap.from(".myRound", {
@@ -36,6 +57,12 @@ gsap.from(".myIcon",{duration:2,opacity:0,ease:"back",y:0})
     y: 150,
     stagger: 0.25,
   });
-  myText.addEventListener("mouseenter", () => hover.play());
-  myText.addEventListener("mouseleave", () => hover.reverse());
+  myText.addEventListener("mouseenter", () => {
+    hover.play();
+    hoverIcon.play();
+  });
+  myText.addEventListener("mouseleave", () => {
+    hover.reverse();
+    hoverIcon.reverse();
+  });
 </script>
