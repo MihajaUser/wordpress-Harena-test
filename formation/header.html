@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <div id="myCard" style="float: center; text-align: center ;background-color:#FFFFFF45 ; height:650px ;margin-top:-200px;padding-top:45px ;border-radius:80px">
-    <div style="margin-left:20px ;padding-top:0px">
+    <div class="myIcon" style="margin-left:20px ;padding-top:0px">
     <img src="http://wordpress.joblinkagency.com/wp-content/uploads/2023/02/dessin-haut-de-page-formation.png" width="30%">
     </div>
   <div class="myRound" style="margin-left: 100px">SUR</div>
@@ -26,6 +26,8 @@
   }
 </style>
 <script>
+gsap.from(".myIcon",{duration:2,opacity:0,ease:"back",y:0})
+
   const myText = document.getElementById("myCard");
   const hover = gsap.from(".myRound", {
     duration: 2,
