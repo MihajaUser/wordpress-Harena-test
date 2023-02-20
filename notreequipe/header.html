@@ -70,14 +70,15 @@
     padding-top: 0px;
   }
   .flip-box {
-    margin-top: -100px;
-    margin-bottom: 30px;
+    margin-top: -5%;
+    margin-bottom: 1%;
+    margin-left: 30%;
     background-color: transparent;
-    width: 115%;
-    height: 150px;
-    margin-left: -7%;
-    border-radius: 15px;
-    /* border: 1px solid #fff;*/
+    width: 40%;
+    height: 100px;
+    border: 3px solid #f1f1f1;
+    border-radius: 80px;
+    border: 1px solid #fff;
     perspective: 1000px;
   }
 
@@ -88,10 +89,12 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    border-radius: 80px;
   }
 
   .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
+    border-radius: 80px;
   }
 
   .flip-box-front,
@@ -101,24 +104,29 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    border-radius: 80px;
   }
 
   .flip-box-front {
+    background-color: #9e9b9b;
     font-size: 1.5em;
     font-family: Rockwell, console;
     font-weight: bold;
     font-size: 35px;
     padding-top: 30px;
     color: white;
+    border-radius: 80px;
   }
 
   .flip-box-back {
+    background-color: rgb(20, 55, 90);
     font-family: Rockwell, console;
     font-weight: bold;
     font-weight: bold;
     padding-top: 30px;
     color: white;
     transform: rotateY(180deg);
+    border-radius: 80px;
   }
 </style>
 <script>
